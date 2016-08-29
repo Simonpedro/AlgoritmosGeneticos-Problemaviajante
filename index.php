@@ -129,11 +129,11 @@
                                 <label for="probMutacion" class="">Probabilidad mutación</label>
                             </div>
                             <div class="md-form">
-                                <input type="number" min="1" max="500" step="1" value="50" id="poblacionSize" class="form-control">
+                                <input type="number" min="1" max="1500" step="1" value="50" id="poblacionSize" class="form-control">
                                 <label for="poblacionSize" class="">Tamaño de población</label>
                             </div>
                             <div class="md-form">
-                                <input type="number" min="10" max="500" step="5" value="20" id="cantCiclos" class="form-control">
+                                <input type="number" min="10" max="15000" step="5" value="20" id="cantCiclos" class="form-control">
                                 <label for="cantCiclos" class="">Cantidad de ciclos</label>
                             </div>
                             <input id="submitGenetico" type="submit" style="display:none">
