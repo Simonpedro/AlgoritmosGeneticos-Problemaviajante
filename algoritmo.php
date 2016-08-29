@@ -19,7 +19,7 @@ if ($algoritmo === "exhaustivo") {
     $result = json_encode($result);
     echo $result;
 } else if ($algoritmo === "heuristicoConPartida") {
-    $idProvincia = $algoritmo = $_REQUEST["id"];
+    $idProvincia = $algoritmo = $_REQUEST["parametros"]["id"];
     $result = (new HeuristicoConPartida($idProvincia))->correr();
     $result = json_encode($result);
     echo $result;

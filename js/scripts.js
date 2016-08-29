@@ -26,7 +26,8 @@ function ProblemaViajanteViewModel() {
     };
 
     self.heuristicoConPartida = function ($provincia) {
-        ajax('heuristicoConPartida');
+        var parametros = {"id" : $provincia.id };
+        ajax('heuristicoConPartida', parametros);
     };
 
     self.heuristico = function () {
@@ -108,7 +109,7 @@ function initMap(center, flightPlanCoordinates) {
 
 function ajax(algoritmo, parametros) {
     var data;
-    if (algoritmo === 'genetico') {
+    if (algoritmo === 'genetico' || algoritmo == 'heuristicoConPartida') {
         data = {
             "algoritmo": algoritmo,
             "parametros": parametros
@@ -155,14 +156,13 @@ function ajax(algoritmo, parametros) {
 
 function animateCircle(line) {
     var count = 0;
-        animationCircle = setInterval(function () {
+        window.setInterval(function () {
             count = (count + 1) % 200;
 
             var icons = line.get('icons');
             icons[0].offset = (count / 2) + '%';
             line.set('icons', icons);
         }, 30);
-
 }
 
 function formatForMaps(data) {
