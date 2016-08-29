@@ -129,7 +129,7 @@ function ajax(algoritmo, parametros) {
                 }).done(function (data) {
                     progress = data;
                 });
-            }, 1000);
+            }, 400);
             clear();
             viewModel.ajax(true);
             animateCircle();
