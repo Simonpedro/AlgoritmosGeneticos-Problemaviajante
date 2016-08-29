@@ -98,8 +98,8 @@ class Operadores {
 
         $genes = $cromosoma->getProvincias();
 
-        $random1 = rand(0, 22);
-        $random2 = rand(0, 22);
+        $random1 = mt_rand(0, 22);
+        $random2 = mt_rand(0, 22);
 
         $gen1 = $genes[$random1];
         $genes[$random1] = $genes[$random2];

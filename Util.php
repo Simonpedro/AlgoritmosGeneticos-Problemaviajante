@@ -16,6 +16,6 @@ class Util {
      * devuelve entre 0 y 1
      */
     public static function random() {
-        return rand() / getrandmax();
+        return mt_rand() / mt_getrandmax();
     }
 }

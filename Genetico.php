@@ -87,7 +87,7 @@ class Genetico extends AlgoritmoBase {
 
             while (count($provincias) > 0) {
                 $keys = array_keys($provincias);
-                $random = rand(0, count($provincias) - 1);
+                $random = mt_rand(0, count($provincias) - 1);
                 $keyProvincia = $keys[$random];
                 $prov = $provincias[$keyProvincia];
                 $genes[] = $prov->getId();
