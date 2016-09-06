@@ -78,7 +78,7 @@ class Poblacion {
 
     private function calcularFitness() {
         foreach ($this->cromosomas as $c) {
-            $fitness = 1 − $c->getDistancia() / $this->distanciaTotal;
+            $fitness = 1 - $c->getDistancia() / $this->distanciaTotal;
             $c->setFitness($fitness);
         }
     }
